@@ -1,0 +1,11 @@
+
+
+  ------------------------------------------------------------------------------------------------------------------
+
+  	 	Application Title & Version : ${info.app.name}-${info.app.version}
+  	 	App Running on Server Port  : ${server.port}
+  	 	Application Environment     : ${spring.profiles.active}
+  	 	Spring Cloud Version        : ${spring-cloud.version}
+  	 	Spring Boot Version         : ${spring-boot.version}
+
+  ------------------------------------------------------------------------------------------------------------------
