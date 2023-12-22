@@ -97,11 +97,11 @@ spring:
             on-profile: dev
     data:
         mongodb:
-            uri: mongodb://mongo-service:27017/application
+            uri: mongodb://mongo-service.default.svc.cluster.local:27017/application
     kafka:
-        bootstrap-servers: kafka-service:9092
+        bootstrap-servers: kafka-service.default.svc.cluster.local:9092
 
 management:
     zipkin:
         tracing:
-            endpoint: zipkin-service:9411/api/v2/spans
+            endpoint: zipkin-service.default.svc.cluster.local:9411/api/v2/spans
