@@ -19,7 +19,7 @@ spring:
     #Data source config
     data:
      mongodb:
-        host: mongo-service
+        host: localhost
         username: admin
         password: admin
         database: application
@@ -27,7 +27,7 @@ spring:
         auto-index-creation: true
 
     kafka:
-        bootstrap-servers: kafka-service:9092
+        bootstrap-servers: localhost:9092
         admin:
             auto-create: true
 server:
@@ -43,7 +43,7 @@ management:
             enabled: true
     zipkin:
         tracing:
-            endpoint: zipkin-service:9411/api/v2/spans
+            endpoint: localhost:9411/api/v2/spans
     tracing:
         enabled: true
         sampling:
@@ -94,14 +94,14 @@ topic:
 spring:
     config:
         activate:
-            on-profile: local
+            on-profile: dev
     data:
         mongodb:
-            uri: mongodb://localhost:27017/application
+            uri: mongodb://mongo-service:27017/application
     kafka:
-        bootstrap-servers: localhost:9092
+        bootstrap-servers: kafka-service:9092
 
 management:
     zipkin:
         tracing:
-            endpoint: localhost:9411/api/v2/spans
+            endpoint: zipkin-service:9411/api/v2/spans
