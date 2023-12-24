@@ -30,4 +30,4 @@ jobs:
         run: |
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           docker buildx create --use
-          docker buildx build . --file Dockerfile --tag jaganreddy17/los-config-service:latest --push
+          docker buildx build . --file Dockerfile --tag jaganreddy17/los-app-service:latest --push
