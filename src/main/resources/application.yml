@@ -15,6 +15,8 @@ spring:
         kubernetes:
             discovery:
                 all-namespaces: true
+    reactor:
+        context-propagation: auto
 
     #Data source config
     data:
@@ -44,6 +46,10 @@ management:
     zipkin:
         tracing:
             endpoint: localhost:9411/api/v2/spans
+    otlp:
+        metrics:
+            export:
+                url: localhost:4318/v1/traces
     tracing:
         enabled: true
         sampling:
@@ -102,6 +108,10 @@ spring:
         bootstrap-servers: kafka.dev-kafka.svc.cluster.local:9092
 
 management:
+    otlp:
+        metrics:
+            export:
+                url: jaeger.dev-jaeger.svc.cluster.local:4318/v1/traces
     zipkin:
         tracing:
             endpoint: zipkin.dev-zipkin.svc.cluster.local:9411/api/v2/spans

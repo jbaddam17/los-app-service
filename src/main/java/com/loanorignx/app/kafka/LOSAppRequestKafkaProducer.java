@@ -1,5 +1,6 @@
 package com.loanorignx.app.kafka;
 
+import io.micrometer.observation.annotation.Observed;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,6 +10,7 @@ import reactor.kafka.sender.KafkaSender;
 import reactor.kafka.sender.SenderRecord;
 
 @Log4j2
+@Observed
 @Configuration
 @RequiredArgsConstructor
 public class LOSAppRequestKafkaProducer {

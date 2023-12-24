@@ -3,6 +3,7 @@ package com.loanorignx.app.controller;
 
 import com.loanorignx.app.service.LOSAppService;
 import com.loanorignx.app.util.Endpoints;
+import io.micrometer.observation.annotation.Observed;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.Map;
 
+@Observed
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(Endpoints.ROOT)
