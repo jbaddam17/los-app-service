@@ -103,7 +103,7 @@ spring:
             on-profile: dev
     data:
         mongodb:
-            uri: mongodb://mongo.dev-mongo.svc.cluster.local:27017/application
+            uri: mongodb://mongodb.dev-mongodb.svc.cluster.local:27017/application
     kafka:
         bootstrap-servers: kafka.dev-kafka.svc.cluster.local:9092
 
