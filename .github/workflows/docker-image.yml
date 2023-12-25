@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: name:Checkout code
+        uses: actions/checkout@v3
 
       - name: Set up Java
         uses: actions/setup-java@v2
@@ -34,9 +35,11 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
+          platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: jaganreddy17/los-app-service:latest
+          tags: jaganreddy17/${{ github.repository }}:latest
